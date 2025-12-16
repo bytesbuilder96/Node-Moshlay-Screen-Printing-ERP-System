@@ -29,7 +29,7 @@ export const createAgent = async (req, res) => {
       username,
       email,
       password: hashedPassword,
-      role: "agent",
+      role: "Agent",
     });
 
     res.status(201).json({
@@ -45,7 +45,7 @@ export const createAgent = async (req, res) => {
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Server error",
+      message: error.message,
     });
   }
 };
