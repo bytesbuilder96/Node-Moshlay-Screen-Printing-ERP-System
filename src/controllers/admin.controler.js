@@ -50,7 +50,7 @@ export const loginAdmin = async (req, res) => {
       token,
       admin: {
         id: admin._id,
-        name: admin.name,
+        username: admin.username,
         email: admin.email,
       },
     });
