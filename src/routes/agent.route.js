@@ -4,6 +4,7 @@ import { adminAuth } from "../middelwares/adminAuth.middelware.js";
 
 import {
   createAgent,
+  loginAgent,
   getAgentById,
   getAllAgents,
   updateAgentById,
@@ -13,6 +14,7 @@ import {
 const agentRouter = Router();
 
 agentRouter.post("/create", loginAuth, adminAuth, createAgent);
+agentRouter.post("/login-agent", loginAuth, adminAuth, loginAgent);
 agentRouter.get("/get-all-agents", loginAuth, adminAuth, getAllAgents);
 agentRouter.get("/get-agent-by-id/:id", loginAuth, adminAuth, getAgentById);
 agentRouter.put("/update-agent/:id", loginAuth, adminAuth, updateAgentById);

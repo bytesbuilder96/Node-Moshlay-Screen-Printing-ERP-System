@@ -22,6 +22,9 @@ export const loginAuth = async (req, res, next) => {
     }
 
     req.user = user;
+    req.userId = decoded.id;
+    console.log("User ID : ", req.userId);
+
     next();
   } catch (error) {
     return res.status(401).json({ success: false, message: "Invalid token" });

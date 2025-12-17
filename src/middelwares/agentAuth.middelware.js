@@ -1,6 +1,6 @@
 import { User } from "../models/user.model.js";
 
-export const adminAuth = async (req, res, next) => {
+export const agentAuth = async (req, res, next) => {
   try {
     if (!req.userId) {
       return res.status(401).json({
@@ -18,7 +18,7 @@ export const adminAuth = async (req, res, next) => {
       });
     }
 
-    if (user.role !== "Admin") {
+    if (user.role !== "Agent") {
       return res.status(403).json({
         success: false,
         message: "Forbidden. Admins only.",
