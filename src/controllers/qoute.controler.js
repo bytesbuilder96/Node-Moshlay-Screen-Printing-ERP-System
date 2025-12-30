@@ -166,7 +166,8 @@ export const printQuote = async (req, res) => {
       <body>
         <h2>Quote ${quote.queryNo}</h2>
         <p>Query No: ${quote.queryNo}</p>
-        <p>CCustomer: ${quote.customer.companyName}</p>
+        <p>Customer: ${quote.customer.companyName}</p>
+        <p>Designing Fee: ${quote.designingFee}</p>
         <p>Designing Fee: ${quote.designingFee}</p>
         <p>Shiping Cost: ${quote.shippingCost}</p>
         <p>Total: ${quote.grandTotal}</p>
